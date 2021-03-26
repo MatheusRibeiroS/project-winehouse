@@ -29,8 +29,20 @@ nav{
   right: 0;
 }
 
-nav li{
+nav,li{
   display: inline;
   margin: 15px;
+  
 }
 
+nav a{
+  color: rgb(202, 192, 192);
+}
+
+nav a:hover{
+  color:red;
+}
+
+nav a:active{
+  color: black;
+}
