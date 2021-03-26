@@ -1,3 +1,36 @@
-body {
+body, header {
   font-family: 'Ubuntu', sans-serif;
 }
+
+header {
+  background-color: #5e2129;
+  padding: 10px 0;
+}
+
+.box {
+  position: relative;
+  width: 940px;
+  margin: 0 auto;
+  font-size:30px;
+}
+
+.logo {
+  width: 7em;
+}
+
+.banner {
+  width: 100%;
+  height: 550px;
+}
+
+nav{
+  position: absolute;
+  top: 2em;
+  right: 0;
+}
+
+nav li{
+  display: inline;
+  margin: 15px;
+}
+
