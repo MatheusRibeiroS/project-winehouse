@@ -62,11 +62,18 @@ p {
   margin: 10px;
 }
 
-#products,.options {
+.options {
   display: block;
   text-align: center;  
-  padding: 1em 0 0 0;
+  padding: 2em 0 0 0;
 }
 
+.map {
+  border-radius: 10px;
+  padding: 10px 0 10px 0;
+  text-align: center;
+}
 
-
+#map-style {
+  width: 100%;
+}
