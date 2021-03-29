@@ -1,0 +1,71 @@
+body, header {
+  font-family: 'Ubuntu', sans-serif;
+  color: #ffffff;
+}
+
+body {
+  background-color: #1c1e24;
+}
+
+header {
+  background-color: #5e2129;
+  padding: 10px 0;
+}
+
+.box {
+  position: relative;
+  width: 940px;
+  margin: 0 auto;
+  font-size:30px;
+}
+
+.logo {
+  width: 7em;
+}
+
+.banner {
+  width: 100%;
+  height: 550px;
+}
+
+
+nav{
+  position: absolute;
+  top: 2em;
+  right: 0;
+}
+
+nav li{
+  display: inline;
+  margin: 15px;
+  
+}
+
+nav a{
+  color: rgb(202, 192, 192);
+}
+
+nav a:hover{
+  color:red;
+}
+
+nav a:active{
+  color: black;
+}
+
+footer {
+  text-align: center;
+  background: url("./img/bg.jpg");
+  padding: 40px 0;
+}
+
+.copyright {
+  color: #FFFFFF;
+  font-size: 13px;
+  margin: 30px 0 30px;
+  padding: 30px 0 0 0;
+}
+
+#logo-branca {
+  width: 14em;
+}
