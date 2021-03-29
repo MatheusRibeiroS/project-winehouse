@@ -1,5 +1,10 @@
 body, header {
   font-family: 'Ubuntu', sans-serif;
+  color: #ffffff;
+}
+
+body {
+  background-color: #1c1e24;
 }
 
 header {
