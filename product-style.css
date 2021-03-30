@@ -86,5 +86,10 @@ footer {
   box-sizing: border-box;
   border: 4px solid #FFFFFF;
   border-radius: 10px;
+  font-weight: bold;
+  font-size: 30px;
 }
 
+.wineimg {
+  padding: 50px 0 50px 0;
+}
