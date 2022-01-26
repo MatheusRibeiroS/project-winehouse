@@ -9,14 +9,14 @@ body {
 
 header {
   background-color: #5e2129;
-  padding: 10px 0;
+  padding: 15px;
 }
 
 .box {
   position: relative;
   width: 940px;
-  margin: 0 auto;
-  font-size:30px;
+  margin: 0 4em 0 2em;
+  font-size: 30px;
 }
 
 .logo {
@@ -28,27 +28,26 @@ header {
   height: 550px;
 }
 
-nav{
+nav {
   position: absolute;
   top: 2em;
   right: 0;
 }
 
-nav li{
+nav li {
   display: inline;
-  margin: 15px;
-  
+  margin: 20px;
 }
 
-nav a{
-  color: rgb(202, 192, 192);
+nav a {
+  color: rgb(240, 236, 236);
 }
 
-nav a:hover{
-  color:red;
+nav a:hover {
+  color: rgb(255, 238, 5);
 }
 
-nav a:active{
+nav a:active {
   color: black;
 }
 
@@ -69,8 +68,7 @@ p {
 
 .options {
   display: block;
-  text-align: center;  
-  padding: 2em 0 0 0;
+  padding: 2em 0 0 2em;
 }
 
 .map {
@@ -89,7 +87,7 @@ h3 {
   padding-top: 4rem;
 }
 
-.info{
+.info {
   text-align: center;
   padding: 1rem 0 0 0;
 }
