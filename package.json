@@ -1,0 +1,26 @@
+{
+  "name": "winehouse",
+  "version": "1.0.0",
+  "description": "to do",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^27.4.7"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatheusRibeiroS/project-winehouse.git"
+  },
+  "authors": [
+    "Matheus Ribeiro",
+    "Cassiano Rodrigues"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MatheusRibeiroS/project-winehouse/issues"
+  },
+  "homepage": "https://github.com/MatheusRibeiroS/project-winehouse#readme"
+}
