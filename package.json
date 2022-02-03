@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "to do",
   "main": "index.js",
+  "jest": {
+    "testEnvironment": "jsdom"
+  },
   "dependencies": {},
   "devDependencies": {
-    "jest": "^27.4.7"
+    "jest": "^27.4.7",
+    "jest-environment-jsdom": "^27.4.6"
   },
   "scripts": {
     "test": "jest"
