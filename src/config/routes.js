@@ -1,4 +1,4 @@
-import * as pages from '../pages';
+import * as pages from "../pages";
 import * as icons from "@iconscout/react-unicons";
 
 import { wineTypes, priceRange } from "../config/types";
@@ -55,12 +55,6 @@ const routes = [
         value: priceRange,
       },
     ],
-  },
-  {
-    key: "wines-list-page",
-    path: "/wines/:selectedCategory",
-    hidden: true,
-    component: pages.WineList,
   },
 ];
 

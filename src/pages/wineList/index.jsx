@@ -1,11 +1,18 @@
 import React from "react";
 
-import { useParams } from "react-router-dom";
+import { useQuery } from "../../helpers/useQuery";
 
 export default function WineList() {
-  const { selectedCategory } = useParams();
+  const query = useQuery();
 
   return (
-    <div className='container'>Categoria Selecionada: {selectedCategory}</div>
+    <>
+      <div className='container'>
+        Tipo de Vinho Selecionada: {query.get("type")}
+      </div>
+      <div className='container'>
+        Valor Minimo Selecionado: {query.get("min")} - Valor Maximo Selecionado: {query.get("max")}
+      </div>
+    </>
   );
 }
