@@ -1,5 +1,15 @@
+import ApplicationRouter from "./components/router";
+import Navbar from "./components/navbar";
+
+import './App.css'
+
 function App() {
-  return <div>Initial commit</div>;
+  return (
+    <>
+      <Navbar />
+      <ApplicationRouter />
+    </>
+  );
 }
 
 export default App;
