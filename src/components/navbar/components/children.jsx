@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Children({ options }) {
   return (
     <div className='navbar-submenu'>

@@ -1,13 +1,5 @@
-import About from "./about";
-import Contact from "./contact";
-import Home from "./homepage";
-import WineList from "./wineList"
-import Product from "./product";
-
-export default {
-  About,
-  Contact,
-  Home,
-  WineList,
-  Product,
-}
+export { default as About } from './about';
+export { default as Contact } from './contact';
+export { default as Home } from './homepage';
+export { default as WineList } from './wineList';
+export { default as Product } from './product';

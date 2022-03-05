@@ -1,9 +1,11 @@
 import React from "react";
 
+import { useParams } from "react-router-dom";
+
 export default function WineList() {
+  const { selectedCategory } = useParams();
+
   return (
-    <div className="container">
-      <h1>Wine List</h1>
-    </div>
+    <div className='container'>Categoria Selecionada: {selectedCategory}</div>
   );
 }

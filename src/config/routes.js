@@ -1,4 +1,4 @@
-import pages from "../pages";
+import * as pages from '../pages';
 import * as icons from "@iconscout/react-unicons";
 
 import { wineTypes, priceRange } from "../config/types";
@@ -38,8 +38,8 @@ const routes = [
     component: pages.Contact,
   },
   {
-    key: "wines-list-page",
-    path: "/wines/:selectedCategory",
+    key: "wines-page",
+    path: "/wines",
     menuName: "Wines",
     icon: icons.UilGlassMartini,
     component: pages.WineList,
@@ -55,6 +55,12 @@ const routes = [
         value: priceRange,
       },
     ],
+  },
+  {
+    key: "wines-list-page",
+    path: "/wines/:selectedCategory",
+    hidden: true,
+    component: pages.WineList,
   },
 ];
 
