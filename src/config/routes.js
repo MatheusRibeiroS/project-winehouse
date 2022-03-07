@@ -46,13 +46,11 @@ const routes = [
     options: [
       {
         key: "wine-types",
-        title: "Wine Types",
-        value: wineTypes,
+        values: wineTypes,
       },
       {
         key: "price-range",
-        title: "Price Range",
-        value: priceRange,
+        values: priceRange,
       },
     ],
   },
