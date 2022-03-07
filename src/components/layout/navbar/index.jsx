@@ -9,19 +9,14 @@ import routes from "../../../config/routes";
 const NavigationHeader = styledComponents.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 0.5rem 1rem;
+
+  max-width: 1200px;
 `;
 
 export default function NavigationBar() {
-  const [onHover, setOnHover] = useState({});
   const navigate = useNavigate();
-
-  const handleHover = (id, state) => {
-    setTimeout(() => {
-      setOnHover({ ...onHover, [id]: state });
-    }, 500);
-  };
 
   return (
     <NavigationHeader>
@@ -29,18 +24,9 @@ export default function NavigationBar() {
         .filter((route) => !route.hidden)
         .map(({ key, path, options, menuName: title }) => {
           return options ? (
-            <Navbar.Menu.Submenu
-              key={key}
-              onMouseOver={() => handleHover(key, true)}
-              onMouseOut={() => handleHover(key, false)}
-              onClick={() => navigate(path)}
-            >
-              {title}
-              <Navbar.Menu.List
-                visible={onHover[key]}
-                onMouseOver={() => handleHover(key, true)}
-                onMouseOut={() => handleHover(key, false)}
-              >
+            <Navbar.Menu.Submenu key={key}>
+              <span onClick={() => navigate(path)}>{title}</span>
+              <Navbar.Menu.List>
                 {options.map(({ key, values }) =>
                   key === "wine-types"
                     ? values.map(({ name }) => (

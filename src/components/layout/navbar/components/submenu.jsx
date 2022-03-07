@@ -1,6 +1,13 @@
 import styledComponents, { css } from "styled-components";
 
 const Container = styledComponents.div`
+  & > div {
+    display: none;
+  }
+
+  &:hover > div {
+    display: flex;
+  }
 `;
 
 const BackgroundOpacity = styledComponents.div`

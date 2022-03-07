@@ -7,6 +7,6 @@ const Head = styledComponents.div`
   z-index: 10;
 `;
 
-export default function List({ children, visible, ...props }) {
-  return visible ? <Head {...props}>{children}</Head> : null;
+export default function List({ children, ...props }) {
+  return <Head {...props}>{children}</Head>;
 }
