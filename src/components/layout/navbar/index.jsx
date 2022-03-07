@@ -22,10 +22,15 @@ export default function NavigationBar() {
     <NavigationHeader>
       {routes
         .filter((route) => !route.hidden)
-        .map(({ key, path, options, menuName: title }) => {
+        .map(({ key, path, options, icon: Icon, menuName: title }) => {
           return options ? (
             <Navbar.Menu.Submenu key={key}>
-              <span onClick={() => navigate(path)}>{title}</span>
+              <span onClick={() => navigate(path)}>
+                <Icon size={24} style={{ verticalAlign: "middle" }} />
+                <span style={{ marginLeft: "2px", fontStyle: "bold" }}>
+                  {title}
+                </span>
+              </span>
               <Navbar.Menu.List>
                 {options.map(({ key, values }) =>
                   key === "wine-types"
@@ -52,7 +57,12 @@ export default function NavigationBar() {
             </Navbar.Menu.Submenu>
           ) : (
             <Navbar.Item key={key} onClick={() => navigate(path)}>
-              {title}
+              <span>
+                <Icon size={24} style={{ verticalAlign: "middle" }} />
+                <span style={{ marginLeft: "2px", fontStyle: "bold" }}>
+                  {title}
+                </span>
+              </span>
             </Navbar.Item>
           );
         })}
