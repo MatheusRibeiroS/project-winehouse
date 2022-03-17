@@ -1,26 +1,42 @@
 {
-  "name": "winehouse",
-  "version": "1.0.0",
-  "description": "to do",
-  "main": "index.js",
-  "dependencies": {},
-  "devDependencies": {
-    "jest": "^27.4.7"
+  "name": "project-winehouse",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@iconscout/react-unicons": "^1.1.6",
+    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/react": "^12.1.3",
+    "@testing-library/user-event": "^13.5.0",
+    "node-sass": "^7.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "6",
+    "react-scripts": "5.0.0",
+    "styled-components": "^5.3.3",
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "test": "jest"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MatheusRibeiroS/project-winehouse.git"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
-  "authors": [
-    "Matheus Ribeiro",
-    "Cassiano Rodrigues"
-  ],
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/MatheusRibeiroS/project-winehouse/issues"
-  },
-  "homepage": "https://github.com/MatheusRibeiroS/project-winehouse#readme"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
