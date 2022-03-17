@@ -1,3 +1,4 @@
+import { useState, createContext } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 
 import ApplicationRouter from "./components/router";
@@ -7,25 +8,35 @@ import Body from "./components/layout/body";
 import "./App.css"; // Initial stylesheet
 import "./scss/main.scss"; // Scss stylesheet
 
+export const ThemeContext = createContext();
+
 function App() {
-  const theme = {
-    header: {
-      background: "#3a3a3a",
-      color: "#ffffff",
-      borderColor: "#777777",
+  const initialTheme = {
+    theme: "dark",
+    themeProps: {
+      header: {
+        background: "#3a3a3a",
+        color: "#ffffff",
+      },
+      body: {
+        background: "#fafafa",
+        color: "#333",
+      },
     },
-    body: {
-      background: "#fafafa",
-      color: "#333",
-    },
+  };
+  const [theme, setTheme] = useState(initialTheme);
+  const toggleTheme = () => {
+    setTheme((prevTheme) => !prevTheme);
   };
 
   return (
     <Router>
-      <Header theme={theme.header} />
-      <Body theme={theme.body}>
-        <ApplicationRouter />
-      </Body>
+      <ThemeContext.Provider value={{ theme, toggleTheme }}>
+        <Header theme={theme.themeProps.header} />
+        <Body theme={theme.themeProps.body}>
+          <ApplicationRouter />
+        </Body>
+      </ThemeContext.Provider>
     </Router>
   );
 }

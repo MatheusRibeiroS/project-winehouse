@@ -1,14 +1,13 @@
-import Submenu from "./submenu";
-import Item from "./item";
-import List from "./list";
+import DropdownMenu from "./dropdownMenu";
+import DropdownItem from "./dropdownItem";
+import NavItem from "./navItem";
+import NavBody from "./navBody";
 
-const Menu = {
-  Submenu: Submenu,
-  List: List,
-  Item: Item,
+const Navbar = {
+  Body: NavBody,
+  Item: NavItem,
+  DropdownMenu,
+  DropdownItem,
 };
 
-export default {
-  Menu,
-  Item,
-};
+export default Navbar;

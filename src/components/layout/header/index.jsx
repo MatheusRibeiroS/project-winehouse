@@ -1,9 +1,9 @@
 import NavigationBar from "../navbar";
 
+import routes from "../../../config/routes";
+
 export default function Header({ theme }) {
   const style = {
-    width: "100vw",
-
     background: theme.background,
     color: theme.color,
 
@@ -11,9 +11,12 @@ export default function Header({ theme }) {
     borderBottom: `0.2rem solid ${theme.borderColor}`,
   };
 
+  // TODO: Add the logo to the header and account icon to the right
+  const navigationRoutes = routes;
+
   return (
     <header style={style}>
-      <NavigationBar />
+      <NavigationBar routes={navigationRoutes} />
     </header>
   );
 }
