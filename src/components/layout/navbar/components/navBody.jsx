@@ -1,10 +1,10 @@
 import styledComponents from "styled-components";
 
-export default function NavBody({ alignment = "horizontal", children }) {
+export default function NavBody({ children }) {
   const NavBody = styledComponents.ul`
-    white-space: ${alignment === "horizontal" ? "nowrap" : "normal"};
     outline: 0;
     position: relative;
+    display: contents;
 
     list-style-type: none;
     margin: 0;

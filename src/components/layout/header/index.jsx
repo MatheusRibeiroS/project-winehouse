@@ -12,7 +12,9 @@ export default function Header({ theme }) {
   };
 
   // TODO: Add the logo to the header and account icon to the right
-  const navigationRoutes = routes;
+  const navigationRoutes = {
+    bodyRoutes: routes.filter(({ hidden }) => !hidden),
+  };
 
   return (
     <header style={style}>

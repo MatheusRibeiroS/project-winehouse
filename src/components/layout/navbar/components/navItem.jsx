@@ -7,12 +7,25 @@ export default function NavItem({ onClick, Icon, text, children }) {
 
   const NavigationItem = styledComponents.li`
     background-color: ${theme?.themeProps?.header?.background};
+
+    & > .dropdown-menu {
+      display: none;
+    }
+    &:hover {
+      & > a {
+        border-radius: 8px 8px 0 0;
+      }
+
+      & > .dropdown-menu {
+        display: block;
+      }
+    }
+
   `;
 
   const ButtomItem = styledComponents.a`
     margin: 0!important;
     text-decoration: none;
-    border-radius: 0;
     position: relative;
     font-weight: bold;
 
@@ -28,24 +41,16 @@ export default function NavItem({ onClick, Icon, text, children }) {
 
     cursor: pointer;
 
-    transition: all 0.2s ease-in-out;
-
-    & > div {
-      display: none;
-    }
+    transition: background-color 0.2s ease-in-out;
 
     &:hover {
       background-color: #7a7a7a;
-
-      & > div {
-        display: block;
-      }
     }
   `;
 
   const iconStyle = {
     verticalAlign: "middle",
-    marginRight: "2px",
+    marginRight: "5px",
   };
 
   return (
@@ -53,8 +58,8 @@ export default function NavItem({ onClick, Icon, text, children }) {
       <ButtomItem onClick={onClick}>
         {Icon && <Icon size={24} style={iconStyle} />}
         {text}
-        {children && children}
       </ButtomItem>
+      {children && children}
     </NavigationItem>
   );
 }
